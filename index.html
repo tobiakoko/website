@@ -5,55 +5,56 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Daniel Akoko&apos;s Website</title>
     <script src="https://unpkg.com/vue@3.5.13/dist/vue.global.prod.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 </head>
 <body>
     <div id="app">
         <div class="container">
-            <div class="content">
-                <div class="name"><h1>DANIEL AKOKO</h1></div>
-                <div class="information">
-                    <div class="about left">
-                        <span>Full-Stack Software Developer</span>
+            <div v-if="isLoading" class="name">
+                <h1>DANIEL AKOKO</h1>
+            </div>
+            <template v-else>
+                <div class="content">
+                    <div class="name"><h1>DANIEL AKOKO</h1></div>
+                    <div class="information">
+                        <div class="about left">
+                            <span>Full-Stack Software Developer</span>
+                        </div>
+                        <div class="about right">
+                            <p v-if="distance">
+                                I'm Daniel, a developer {{ distance.toFixed(2) }} kilometers away from you.
+                            </p>
+                            <p v-else>
+                                I'm Daniel, a developer based in the US.
+                            </p>
+                            <p>I create solutions with code</p>
+                        </div>
                     </div>
-                    <div class="about right">
-                        <p v-if="distance">
-                            I'm Daniel, a developer {{ distance.toFixed(2) }} kilometers away from you.
-                        </p>
-                        <p v-else>
-                            I'm Daniel, a developer based in the US.
-                        </p>
-                        <p>I create solutions with code</p>
-                    </div>
-                </div>
-                <div class="footer">
-                    <div class="social-links">
-                        <div>
-                            <a href="https://www.linkedin.com/in/daniel-akoko" target="_blank" class="info-link">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="#3F6C88" viewBox="0 0 256 256">
+                    <div class="footer">
+                        <div class="social-links">
+                            <a href="https://www.linkedin.com/in/daniel-akoko" target="_blank">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" viewBox="0 0 256 256">
                                     <path d="M216,24H40A16,16,0,0,0,24,40V216a16,16,0,0,0,16,16H216a16,16,0,0,0,16-16V40A16,16,0,0,0,216,24Zm0,192H40V40H216V216ZM96,112v64a8,8,0,0,1-16,0V112a8,8,0,0,1,16,0Zm88,28v36a8,8,0,0,1-16,0V140a20,20,0,0,0-40,0v36a8,8,0,0,1-16,0V112a8,8,0,0,1,15.79-1.78A36,36,0,0,1,184,140ZM100,84A12,12,0,1,1,88,72,12,12,0,0,1,100,84Z"></path>
                                 </svg>
                             </a>
-                        </div>
-                        <div>
-                            <a href="https://github.com/tobiakoko" target="_blank" class="info-link">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="#3F6C88" viewBox="0 0 256 256">
+                            <a href="https://github.com/tobiakoko" target="_blank">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" viewBox="0 0 256 256">
                                     <path d="M208.31,75.68A59.78,59.78,0,0,0,202.93,28,8,8,0,0,0,196,24a59.75,59.75,0,0,0-48,24H124A59.75,59.75,0,0,0,76,24a8,8,0,0,0-6.93,4,59.78,59.78,0,0,0-5.38,47.68A58.14,58.14,0,0,0,56,104v8a56.06,56.06,0,0,0,48.44,55.47A39.8,39.8,0,0,0,96,192v8H72a24,24,0,0,1-24-24A40,40,0,0,0,8,136a8,8,0,0,0,0,16,24,24,0,0,1,24,24,40,40,0,0,0,40,40H96v16a8,8,0,0,0,16,0V192a24,24,0,0,1,48,0v40a8,8,0,0,0,16,0V192a39.8,39.8,0,0,0-8.44-24.53A56.06,56.06,0,0,0,216,112v-8A58.14,58.14,0,0,0,208.31,75.68ZM200,112a40,40,0,0,1-40,40H112a40,40,0,0,1-40-40v-8a41.74,41.74,0,0,1,6.9-22.48A8,8,0,0,0,80,73.83a43.81,43.81,0,0,1,.79-33.58,43.88,43.88,0,0,1,32.32,20.06A8,8,0,0,0,119.82,64h32.35a8,8,0,0,0,6.74-3.69,43.87,43.87,0,0,1,32.32-20.06A43.81,43.81,0,0,1,192,73.83a8.09,8.09,0,0,0,1,7.65A41.72,41.72,0,0,1,200,104Z"></path>
                                 </svg>
                             </a>
-                        </div>
-                        <div>
-                            <a href="mailto:tobiakoko@gmail.com" target="_blank" class="info-link">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="#3F6C88" viewBox="0 0 256 256">
+                            <a href="mailto:tobiakoko@gmail.com" target="_blank">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" viewBox="0 0 256 256">
                                     <path d="M224,48H32a8,8,0,0,0-8,8V192a16,16,0,0,0,16,16H216a16,16,0,0,0,16-16V56A8,8,0,0,0,224,48ZM203.43,64,128,133.15,52.57,64ZM216,192H40V74.19l82.59,75.71a8,8,0,0,0,10.82,0L216,74.19V192Z"></path>
                                 </svg>
                             </a>
                         </div>
-                    </div>
-                    <div class="copyright">
-                        <p>© {{ yearDisplay }}. All rights reserved.</p>
+                        <div class="copyright">
+                            <p>© {{ yearDisplay }}. All rights reserved.</p>
+                        </div>
                     </div>
                 </div>
-            </div>
+            </template>
         </div>
     </div>
 
@@ -68,6 +69,7 @@
                 })
 
                 const distance = ref(null)
+                const isLoading = ref(false)
 
                 getUserLocation()
 
@@ -81,19 +83,19 @@
                             },
                             (error) => {
                                 console.error('Error getting user location:', error);
+                                isLoading.value = false;
                             }
                         );
                     } else {
                         console.error('Geolocation is not supported by this browser.');
+                        isLoading.value = false;
                     }
                 }
 
                 function calculateDistance(userLatitude, userLongitude) {
-                    
                     const siteLatitude = 37.7749;
                     const siteLongitude = -122.4194;
 
-                    
                     const earthRadius = 6371;
                     const latDiff = toRadians(userLatitude - siteLatitude);
                     const longDiff = toRadians(userLongitude - siteLongitude);
@@ -110,7 +112,8 @@
 
                 return {
                     yearDisplay,
-                    distance
+                    distance,
+                    isLoading
                 }
             }
         }).mount('#app')
@@ -140,6 +143,7 @@
 
         .container {
             max-width: 800px;
+            width: 100%;
             text-align: center;
             padding: 2rem;
             border: #E9EDEE 1px solid;
@@ -150,29 +154,35 @@
             -webkit-backdrop-filter: blur(5px);
         }
 
+        .container:hover {
+            backdrop-filter: blur(3px);
+            -webkit-backdrop-filter: blur(3px);
+            transform: scale(1.01);
+            transition: ease-in-out 0.5s;
+        }
+
         .name > h1 {
             display: inline-block;
-            padding: 1rem;
             margin-bottom: 1rem;
-            letter-spacing: 0.4em;
+            letter-spacing: 0.25em;
             font-size: 3vw;
             font-weight: 400;
-            font-family: var(--font-heading);
+            font-family: var(--font-body);
+            text-align: center;
         }
 
         .information {
             display: flex;
-            justify-content: center;
-            gap: 1rem;
+            justify-content: space-around;
             margin-bottom: 2rem;
-            line-height: 1.6;
+            line-height: 1;
         }
 
         .about {
             text-align: left;
             border: #E9EDEE solid 1px;
             padding: 1rem;
-            width: 30%;
+            width: 40%;
             border-radius: 2rem;
             background: rgba(205, 216, 238, 0.2);
             border-radius: 16px;
@@ -182,39 +192,46 @@
             border: 1px solid rgba(255, 255, 255, 0.39);
         }
 
+        .about:hover {
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            transform: scale(1.01);
+            transition: ease-in-out 0.5s;
+        }
+
         .footer {
             margin-top: 2rem;
             font-size: 0.9rem;
             display: flex;
             flex-direction: row;
             gap: 4rem;
-            justify-content: center;
+            justify-content: space-around;
         }
 
         .social-links {
             display: flex;
             flex-direction: row;
             gap: 1rem;
-            justify-content: flex-start;
+            align-items: center;            
+        }
+
+        .social-links a {
+            color: var(--color-primary);
+            transition: color 0.3s ease;
+            transition: ease-in-out 0.2s;
         }
 
         .info-link {
-            color: #3F6C88;
+            color: var(--color-primary);
         }
 
-        .social-links > div {
-            border: #9ba9b4 1px solid;
-            padding: 0.5rem;
-            border-radius: 50%;
-        }
-
-        .social-links > div:hover {
-            color: #9ba9b4;
-            background-color: #466a81;
+        .social-links a:hover {
+            color: #afd7ff;
+            transform: scale(1.5);
         }
 
         svg:hover {
-            fill: #9ba9b4;
+            fill: #afd7ff;
         }
 
         .copyright > p {
@@ -224,14 +241,13 @@
 
         @media (max-width: 768px) {
             .about {
-                text-align: center;
-                justify-items: center;
-                margin: 0 auto;
+                width: 100%;
+                margin-bottom: 1rem;
             }
 
             .information {
                 flex-direction: column;
-                gap: 2rem;
+                align-items: center;
             }
 
             .name {
