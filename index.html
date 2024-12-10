@@ -9,125 +9,133 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 </head>
 <body>
-    <div id="app">
-        <div class="container">
-            <div v-if="isLoading" class="name">
+    <body>
+        <div id="app">
+            <article class="container">
                 <h1>DANIEL AKOKO</h1>
-            </div>
-            <template v-else>
-                <div class="content">
-                    <div class="name"><h1>DANIEL AKOKO</h1></div>
-                    <div class="information">
-                        <div class="about left">
-                            <span>Full-Stack Software Developer</span>
-                        </div>
-                        <div class="about right">
-                            <p v-if="distance">
-                                I'm Daniel, a developer {{ distance.toFixed(2) }} kilometers away from you.
-                            </p>
-                            <p v-else>
-                                I'm Daniel, a developer based in the US.
-                            </p>
-                            <p>I create solutions with code</p>
-                        </div>
-                    </div>
-                    <div class="footer">
-                        <div class="social-links">
-                            <a href="https://www.linkedin.com/in/daniel-akoko" target="_blank">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" viewBox="0 0 256 256">
-                                    <path d="M216,24H40A16,16,0,0,0,24,40V216a16,16,0,0,0,16,16H216a16,16,0,0,0,16-16V40A16,16,0,0,0,216,24Zm0,192H40V40H216V216ZM96,112v64a8,8,0,0,1-16,0V112a8,8,0,0,1,16,0Zm88,28v36a8,8,0,0,1-16,0V140a20,20,0,0,0-40,0v36a8,8,0,0,1-16,0V112a8,8,0,0,1,15.79-1.78A36,36,0,0,1,184,140ZM100,84A12,12,0,1,1,88,72,12,12,0,0,1,100,84Z"></path>
-                                </svg>
-                            </a>
-                            <a href="https://github.com/tobiakoko" target="_blank">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" viewBox="0 0 256 256">
-                                    <path d="M208.31,75.68A59.78,59.78,0,0,0,202.93,28,8,8,0,0,0,196,24a59.75,59.75,0,0,0-48,24H124A59.75,59.75,0,0,0,76,24a8,8,0,0,0-6.93,4,59.78,59.78,0,0,0-5.38,47.68A58.14,58.14,0,0,0,56,104v8a56.06,56.06,0,0,0,48.44,55.47A39.8,39.8,0,0,0,96,192v8H72a24,24,0,0,1-24-24A40,40,0,0,0,8,136a8,8,0,0,0,0,16,24,24,0,0,1,24,24,40,40,0,0,0,40,40H96v16a8,8,0,0,0,16,0V192a24,24,0,0,1,48,0v40a8,8,0,0,0,16,0V192a39.8,39.8,0,0,0-8.44-24.53A56.06,56.06,0,0,0,216,112v-8A58.14,58.14,0,0,0,208.31,75.68ZM200,112a40,40,0,0,1-40,40H112a40,40,0,0,1-40-40v-8a41.74,41.74,0,0,1,6.9-22.48A8,8,0,0,0,80,73.83a43.81,43.81,0,0,1,.79-33.58,43.88,43.88,0,0,1,32.32,20.06A8,8,0,0,0,119.82,64h32.35a8,8,0,0,0,6.74-3.69,43.87,43.87,0,0,1,32.32-20.06A43.81,43.81,0,0,1,192,73.83a8.09,8.09,0,0,0,1,7.65A41.72,41.72,0,0,1,200,104Z"></path>
-                                </svg>
-                            </a>
-                            <a href="mailto:tobiakoko@gmail.com" target="_blank">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" viewBox="0 0 256 256">
-                                    <path d="M224,48H32a8,8,0,0,0-8,8V192a16,16,0,0,0,16,16H216a16,16,0,0,0,16-16V56A8,8,0,0,0,224,48ZM203.43,64,128,133.15,52.57,64ZM216,192H40V74.19l82.59,75.71a8,8,0,0,0,10.82,0L216,74.19V192Z"></path>
-                                </svg>
-                            </a>
-                        </div>
-                        <div class="copyright">
-                            <p>© {{ yearDisplay }}. All rights reserved.</p>
-                        </div>
-                    </div>
+                <section class="about">
+                    <p>
+                        Hello there, my name is Daniel Akoko. I am a new grad CS student from 
+                        <span class="dialog-trigger" data-dialog="wgu-dialog">WGU</span>, 
+                        a resident all-the-cap wearer at 
+                        <span class="dialog-trigger" data-dialog="dlbc-dialog">DLBC</span> 
+                        and a prodical Man United Fan. 
+                        I am currently working on 
+                        <span class="dialog-trigger" data-dialog="arko-dialog">ARKO MEDIA LABS</span>, 
+                        a web and sound design and content studio that aligns my biggest interest areas,
+                        <span class="dialog-trigger" data-dialog="dlbc-website-dialog">DLBC Tampa FL</span> 
+                        website and 
+                        <span class="dialog-trigger" data-dialog="christmas-dialog">12 days of christmas</span>.
+                        Currently in the pipeline are, a 
+                        <span class="dialog-trigger" data-dialog="blog-dialog">blog page</span>, 
+                        complete the 
+                        <span class="dialog-trigger" data-dialog="42sv-dialog">42 SV Priscine</span> 
+                        curriculum and work with more interesting and brilliant people
+                    </p>
+                    <p>
+                        While I started programming with Java and C/C++ tickles my fancy, 
+                        I have been working extensively within the 
+                        <span class="dialog-trigger" data-dialog="js-dialog">JavaScript</span> 
+                        ecosystem for the last 2 years 
+                    </p>
+                </section>
+    
+                <div id="wgu-dialog" class="info-dialog" style="display:none;">
+                    <a href="https://www.wgu.edu/alumni/commencement/e-diploma-verification/validate.html" target="_blank" class="info-link">Validation URL</a>
+                    <p>CeDiD: 241G-UCTQ-D9O4</p>
                 </div>
-            </template>
+    
+                <div id="dlbc-dialog" class="info-dialog" style="display:none;">
+                    Deeper Life Bible Church, the church I currently attend and volunteer at. I lead the media (local church video + sound production and livestream) team, play piano for the choir and oversee the fundraising department
+                </div>
+    
+                <div id="arko-dialog" class="info-dialog" style="display:none;">
+                    A side project I embarked upon to take initiative on building projects end-to-end and learn the more business and managerial aspect of delivering user centered products
+                </div>
+    
+                <div id="dlbc-website-dialog" class="info-dialog" style="display:none;">
+                    DLBC is an international church that is split up into smaller locations. I'm building the church website with Nextjs and Tailwind CSS
+                </div>
+    
+                <div id="christmas-dialog" class="info-dialog" style="display:none;">
+                    12 Christmas songs released iteratively 12 days till Christmas every year for the last 2 years
+                </div>
+    
+                <div id="blog-dialog" class="info-dialog" style="display:none;">
+                    To document my progress so far, as a consistency marker and a source of motivation for myself, sometime in the future seeing how far I've come
+                </div>
+    
+                <div id="42sv-dialog" class="info-dialog" style="display:none;">
+                    Deeper Life Bible Church, the church I currently attend and volunteer at. I lead the media (local church video + sound production and livestream) team, play piano for the choir and oversee the fundraising department.
+                </div>
+    
+                <div id="js-dialog" class="info-dialog" style="display:none;">
+                    I have explored a range of Javascript framework for various reasons however, Nextjs has been my daily driver for some time now. 
+                    Ironically, this site is built with Vue. I have used Python quite a lot as well.     
+                </div>
+    
+                <footer class="footer">
+                    <div class="social-links">
+                        <a href="https://www.linkedin.com/in/daniel-akoko" target="_blank" aria-label="LinkedIn Profile">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" viewBox="0 0 256 256">
+                                <path d="M216,24H40A16,16,0,0,0,24,40V216a16,16,0,0,0,16,16H216a16,16,0,0,0,16-16V40A16,16,0,0,0,216,24Zm0,192H40V40H216V216ZM96,112v64a8,8,0,0,1-16,0V112a8,8,0,0,1,16,0Zm88,28v36a8,8,0,0,1-16,0V140a20,20,0,0,0-40,0v36a8,8,0,0,1-16,0V112a8,8,0,0,1,15.79-1.78A36,36,0,0,1,184,140ZM100,84A12,12,0,1,1,88,72,12,12,0,0,1,100,84Z"></path>
+                            </svg>
+                        </a>
+                        <a href="https://github.com/tobiakoko" target="_blank" aria-label="GitHub Profile">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" viewBox="0 0 256 256">
+                                <path d="M208.31,75.68A59.78,59.78,0,0,0,202.93,28,8,8,0,0,0,196,24a59.75,59.75,0,0,0-48,24H124A59.75,59.75,0,0,0,76,24a8,8,0,0,0-6.93,4,59.78,59.78,0,0,0-5.38,47.68A58.14,58.14,0,0,0,56,104v8a56.06,56.06,0,0,0,48.44,55.47A39.8,39.8,0,0,0,96,192v8H72a24,24,0,0,1-24-24A40,40,0,0,0,8,136a8,8,0,0,0,0,16,24,24,0,0,1,24,24,40,40,0,0,0,40,40H96v16a8,8,0,0,0,16,0V192a24,24,0,0,1,48,0v40a8,8,0,0,0,16,0V192a39.8,39.8,0,0,0-8.44-24.53A56.06,56.06,0,0,0,216,112v-8A58.14,58.14,0,0,0,208.31,75.68ZM200,112a40,40,0,0,1-40,40H112a40,40,0,0,1-40-40v-8a41.74,41.74,0,0,1,6.9-22.48A8,8,0,0,0,80,73.83a43.81,43.81,0,0,1,.79-33.58,43.88,43.88,0,0,1,32.32,20.06A8,8,0,0,0,119.82,64h32.35a8,8,0,0,0,6.74-3.69,43.87,43.87,0,0,1,32.32-20.06A43.81,43.81,0,0,1,192,73.83a8.09,8.09,0,0,0,1,7.65A41.72,41.72,0,0,1,200,104Z"></path>
+                            </svg>
+                        </a>
+                        <a href="mailto:tobiakoko@gmail.com" target="_blank" aria-label="Email">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" viewBox="0 0 256 256">
+                                <path d="M224,48H32a8,8,0,0,0-8,8V192a16,16,0,0,0,16,16H216a16,16,0,0,0,16-16V56A8,8,0,0,0,224,48ZM203.43,64,128,133.15,52.57,64ZM216,192H40V74.19l82.59,75.71a8,8,0,0,0,10.82,0L216,74.19V192Z"></path>
+                            </svg>
+                        </a>
+                    </div>
+                    <div class="copyright">
+                        <p>© 2024. All rights reserved.</p>
+                    </div>
+                </footer> 
+            </article>
         </div>
-    </div>
 
     <script>
-        const { createApp, ref, computed } = Vue
-
-        createApp({
-            setup() {
-                const yearDisplay = computed(() => {
-                    const currentYear = new Date().getFullYear()
-                    return currentYear === 2024 ? '2024' : `2024 - ${currentYear}`
-                })
-
-                const distance = ref(null)
-                const isLoading = ref(false)
-
-                getUserLocation()
-
-                function getUserLocation() {
-                    if (navigator.geolocation) {
-                        navigator.geolocation.getCurrentPosition(
-                            (position) => {
-                                const userLatitude = position.coords.latitude;
-                                const userLongitude = position.coords.longitude;
-                                calculateDistance(userLatitude, userLongitude);
-                            },
-                            (error) => {
-                                console.error('Error getting user location:', error);
-                                isLoading.value = false;
-                            }
-                        );
-                    } else {
-                        console.error('Geolocation is not supported by this browser.');
-                        isLoading.value = false;
-                    }
+        document.addEventListener('DOMContentLoaded', () => {
+            const dialogTriggers = document.querySelectorAll('.dialog-trigger');
+                
+            dialogTriggers.forEach(trigger => {
+                trigger.addEventListener('click', (e) => {
+                    const dialogId = e.target.getAttribute('data-dialog');
+                    const dialog = document.getElementById(dialogId);
+                        
+                    document.querySelectorAll('.info-dialog').forEach(d => {
+                        if (d !== dialog) d.style.display = 'none';
+                    });
+                        
+                    dialog.style.display = dialog.style.display === 'none' ? 'block' : 'none';
+                });
+            });
+    
+            document.addEventListener('click', (e) => {
+                if (!e.target.closest('.dialog-trigger') && !e.target.closest('.info-dialog')) {
+                    document.querySelectorAll('.info-dialog').forEach(dialog => {
+                        dialog.style.display = 'none';
+                    });
                 }
-
-                function calculateDistance(userLatitude, userLongitude) {
-                    const siteLatitude = 37.7749;
-                    const siteLongitude = -122.4194;
-
-                    const earthRadius = 6371;
-                    const latDiff = toRadians(userLatitude - siteLatitude);
-                    const longDiff = toRadians(userLongitude - siteLongitude);
-                    const a = Math.sin(latDiff / 2) * Math.sin(latDiff / 2) +
-                            Math.cos(toRadians(siteLatitude)) * Math.cos(toRadians(userLatitude)) *
-                            Math.sin(longDiff / 2) * Math.sin(longDiff / 2);
-                    const c = 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1 - a));
-                    distance.value = earthRadius * c;
-                }
-
-                function toRadians(degrees) {
-                    return degrees * Math.PI / 180;
-                }
-
-                return {
-                    yearDisplay,
-                    distance,
-                    isLoading
-                }
-            }
-        }).mount('#app')
+            });
+        });
     </script>
 
     <style>
         :root {
-            --color-primary: #3F6C88;
-            --color-secondary: #d1eafa;
-            --color-text: #333333;
+            --color-primary: #808564;
+            --color-article: #737c40f3;
+            --color-secondary: #083344;
+            --color-text: #cecece;
             --font-heading: 'Satoshi', sans-serif;
             --font-body: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-
         }
+
         body {
             margin: 0;
             padding: 0;
@@ -139,120 +147,238 @@
             font-weight: 200;
             background-color: var(--color-secondary);
             color: var(--color-primary);
+            line-height: 1.3;
         }
 
-        .container {
-            max-width: 800px;
+        article {
+            max-width: 90%;
             width: 100%;
-            text-align: center;
-            padding: 2rem;
-            border: #E9EDEE 1px solid;
-            border-radius: 4em;
-            background-color: #d0e1f08f;
-            box-shadow: 0 4px 30px rgba(2, 2, 2, 0.1);
+            max-width: 600px;
+            padding: 1rem;
+            background-color: #083344;
+            box-shadow: 0 4px 30px rgba(2, 2, 2, 0.651);
             backdrop-filter: blur(5px);
             -webkit-backdrop-filter: blur(5px);
+            margin: 1rem;
         }
 
-        .container:hover {
-            backdrop-filter: blur(3px);
-            -webkit-backdrop-filter: blur(3px);
-            transform: scale(1.01);
-            transition: ease-in-out 0.5s;
-        }
-
-        .name > h1 {
-            display: inline-block;
+        h1 {
+            font-size: clamp(1.5rem, 5vw, 3rem);
             margin-bottom: 1rem;
             letter-spacing: 0.25em;
-            font-size: 3vw;
             font-weight: 400;
             font-family: var(--font-body);
             text-align: center;
         }
 
-        .information {
-            display: flex;
-            justify-content: space-around;
-            margin-bottom: 2rem;
-            line-height: 1;
-        }
-
         .about {
             text-align: left;
-            border: #E9EDEE solid 1px;
             padding: 1rem;
-            width: 40%;
-            border-radius: 2rem;
-            background: rgba(205, 216, 238, 0.2);
-            border-radius: 16px;
-            box-shadow: 0 4px 30px rgba(2, 2, 2, 0.1);
+            background: #083344;
+            box-shadow: 0 4px 30px rgba(2, 2, 2, 0.651);
             backdrop-filter: blur(5px);
             -webkit-backdrop-filter: blur(7px);
-            border: 1px solid rgba(255, 255, 255, 0.39);
         }
 
-        .about:hover {
+        .info-dialog {
+            background-color: #083344;
+            box-shadow: inset 0 0 2000px rgba(255, 255, 255, .5);
             backdrop-filter: blur(10px);
             -webkit-backdrop-filter: blur(10px);
-            transform: scale(1.01);
-            transition: ease-in-out 0.5s;
+            color: #afd7ff;
+            padding: 1rem;
+            max-width: 300px;
+            margin: 0 auto;
+            text-align: center;
+            font-size: 12pt;
+            line-height: normal;
         }
 
-        .footer {
+
+        .info-link {
+            color: #71a5da;
+            text-decoration: none;
+            position: relative;
+            transition: color 0.3s ease;
+            text-shadow: 1px 1px #083344;
+        }
+
+        .info-link::after {
+            content: '↗';
+            margin-left: 4px;
+            font-size: 0.8em;
+            opacity: 0.7;
+        }
+
+        .info-link:hover {
+            color: #afd7ff;
+            text-shadow: 5px 5px #083344;
+        }
+
+        .info-link:hover::after {
+            opacity: 1;
+        }
+
+        .dialog-trigger {
+            color: #9DB12A;
+            cursor: pointer;
+            transition: color 0.3s ease;
+        }
+
+        .dialog-trigger:hover {
+            color: #CAF2BB;
+            transform: scale(2);    
+        }
+
+        footer {
             margin-top: 2rem;
-            font-size: 0.9rem;
             display: flex;
             flex-direction: row;
-            gap: 4rem;
             justify-content: space-around;
+            gap: 1rem;
         }
 
         .social-links {
             display: flex;
             flex-direction: row;
-            gap: 1rem;
-            align-items: center;            
+            gap: 1.5rem;
+            align-items: center;
+            justify-content: space-around;
         }
 
         .social-links a {
-            color: var(--color-primary);
-            transition: color 0.3s ease;
-            transition: ease-in-out 0.2s;
-        }
-
-        .info-link {
-            color: var(--color-primary);
+            color: var(--color-article);
+            transition: color 0.3s ease, transform 0.2s ease;
         }
 
         .social-links a:hover {
             color: #afd7ff;
-            transform: scale(1.5);
+            transform: scale(1.3);
         }
 
         svg:hover {
             fill: #afd7ff;
+            box-shadow: 1px 1px var(--color-primary);
         }
 
-        .copyright > p {
-            margin-top: 1rem;
+        .copyright {
+            text-align: center;
             opacity: 0.7;
+            font-size: 0.9rem;
         }
 
-        @media (max-width: 768px) {
-            .about {
-                width: 100%;
-                margin-bottom: 1rem;
-            }
-
-            .information {
-                flex-direction: column;
+        @media screen and (max-width: 768px) {
+            body {
+                display: flex;
+                justify-content: center;
                 align-items: center;
+                padding: 1rem; 
+                font-size: 0.875rem;
+                line-height: 1.25rem;
             }
 
-            .name {
-                padding: 0.8rem 2rem;
-                font-size: 1.5rem;
+            article {
+                max-width: 80%;
+                width: 100%;
+                margin: auto;
+                padding: 1rem 1rem 0;
+                max-height: 40%;
+            }
+
+            .about {
+                padding: 1rem;
+                text-align: left;
+                width: 100%;
+                box-sizing: border-box;
+            }
+
+            h1 {
+                font-size: clamp(1.5rem, 5vw, 3rem);
+                margin-bottom: 1rem;
+                letter-spacing: 0.25em;
+            }
+
+            footer {
+                margin-top: 1rem;
+                flex-direction: column;
+            }
+
+            .social-links {
+                justify-content: center;
+                gap: 1rem;
+            }
+
+            .info-dialog {
+                max-width: 40%;
+                margin: 0 auto;
+                padding: 0.5rem;
+                font-size: 0.7rem;
+            }
+
+            .copyright{
+                margin: 0;
+            }
+        }
+
+        @media screen and (max-width: 480px) {
+            body {
+                margin: auto;
+                overflow: hidden;
+                font-size: 0.875rem;
+                line-height: 1.25rem;
+            }
+
+            article {
+                max-width: 90%;
+                max-height: 30%;
+                margin: 0;
+            }
+
+            h1 {
+                font-size: clamp(1.2rem, 5vw, 2.5rem);
+                letter-spacing: 0.15em;
+            }
+
+            .about {
+                padding: 0.75rem;
+            }
+
+            .social-links {
+                gap: 1.5rem;
+            }
+
+            .info-dialog {
+                max-width: 95%;
+                padding: 0.75rem;
+                font-size: 10pt;
+            }
+
+            .copyright > p{
+                margin-bottom: 0.5rem;
+            }
+        }
+
+        /* Accessibility and Print Styles */
+        @media print {
+            body {
+                background-color: white;
+            }
+
+            article {
+                box-shadow: none;
+                border: 1px solid #ccc;
+            }
+        }
+
+        /* High Contrast Mode */
+        @media (prefers-contrast: high) {
+            article {
+                border: 2px solid var(--color-primary);
+            }
+
+            .about a {
+                font-weight: bold;
+                text-decoration: underline;
             }
         }
     </style>
